@@ -1,24 +1,35 @@
 <div class="card">
-    <div class="card-header">
-        Agregar empleado
-    </div>
-    <div class="card-body">
+  <div class="card-header">Agregar empleado</div>
+  <div class="card-body">
+    <form [formGroup]="formularioEmpleados" (ngSubmit)="enviarDatos()">
+      <div class="mb-3">
+        <label for="" class="form-label">Nombre:</label>
+        <input
+          type="text"
+          class="form-control"
+          name=""
+          formControlName="nombre"
+          id=""
+          placeholder="Escribe tu nombre"
+        />
+      </div>
 
-        <form>
-            <div class="mb-3">
-                <label for="" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" name="" id="" placeholder="Escribe tu nombre">
-            </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Correo:</label>
+        <input
+          type="email"
+          class="form-control"
+          name=""
+          formControlName="correo"
+          id=""
+          placeholder="Escribe tu correo"
+        />
+      </div>
 
-            <div class="mb-3">
-                <label for="" class="form-label">Correo:</label>
-                <input type="email" class="form-control" name="" id="" placeholder="Escribe tu correo">
-            </div>
-
-            <div class="btn-group" role="group">
-                <button class="btn btn-success">Agregar</button>
-                <button class="btn btn-primary">Cancelar</button>
-            </div>
-        </form>
-    </div>
+      <div class="btn-group" role="group">
+        <button type="submit" class="btn btn-success">Agregar</button>
+        <button type="button" class="btn btn-primary">Cancelar</button>
+      </div>
+    </form>
+  </div>
 </div>

@@ -9,11 +9,11 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'agregar-empleado' },
   { path: 'agregar-empleado', component: AgregarEmpleadoComponent },
   { path: 'listar-empleado', component: ListarEmpleadoComponent },
-  { path: 'editar-empleado/:id', component: EditarEmpleadoComponent }
+  { path: 'editar-empleado/:id', component: EditarEmpleadoComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
